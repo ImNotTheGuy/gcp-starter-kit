@@ -1,0 +1,7 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/gcp-starter-kit/backend:latest', '.']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/gcp-starter-kit/backend:latest']
+images:
+  - 'gcr.io/gcp-starter-kit/backend:latest'
